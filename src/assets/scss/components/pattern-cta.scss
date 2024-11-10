@@ -1,0 +1,79 @@
+.pattern-cta {
+  height: 100vh;
+  background-repeat: repeat;
+  background-position: top;
+  background-size: 1200px;
+  background-image: url('../images/cheri-pattern.svg');
+  padding: 120px 0;
+  @include breakpoint(medium) {
+    padding: 180px 0;
+  }
+
+
+  &__inner {
+    @include inner;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    text-align: center;
+    background-color: $color--vanilla;
+    padding: 24px;
+
+    @include breakpoint(medium) {
+      padding: 60px 70px;
+    }
+
+    p {
+      max-width: 525px;
+      margin: 0 auto;
+      @include paragraph-p2(400);
+
+      @include breakpoint(medium) {
+        @include paragraph-p1(500);
+      }
+
+      &:last-of-type {
+        margin: 0 auto 40px auto;
+
+        @include breakpoint(medium) {
+          margin: 0 auto 60px auto;
+        }
+      }
+    }
+
+    h2 {
+      font-family: $font--heading;
+      @include heading-h4(400);
+      margin: 0 0 24px 0;
+
+      @include breakpoint(medium) {
+        @include heading-h2(400);
+        margin: 0 auto 40px auto;
+        max-width: 820px;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+
+    @include breakpoint(medium) {
+      gap: 36px;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    a {
+      text-transform: uppercase;
+      min-width: 197px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

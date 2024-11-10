@@ -1,0 +1,22 @@
+.image {
+  margin: 0 0 65px 0;
+
+  @include breakpoint(medium) {
+
+    margin: 0 0 100px 0;
+  }
+
+  &__inner {
+    @include inner;
+    height: 100%;
+
+    .gatsby-image-wrapper {
+      width: 100%;
+      aspect-ratio: 1 !important;
+
+      @include breakpoint(medium) {
+        aspect-ratio: 1340 / 700 !important;
+      }
+    }
+  }
+}

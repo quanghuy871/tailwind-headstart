@@ -1,0 +1,49 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+$color--primary: #0D0D0D;
+$color--secondary: #FFFFFF;
+$color--white: #FFFFFF;
+$color--brown: #8C7D79;
+$color--light-brown: #F0EEEE;
+$color--dark-brown: #64656A;
+$color--vanilla: #F5F3E9;
+$color--scarlet: #FF5526;
+$color--butter-cream: #EFEED9;
+$color--pistachio: #618040;
+$color--gray: #A5A49E;
+
+$content-width: 1440px;
+$outer-width: 1480px;
+
+$font--primary: 'MessinaSans', sans-serif;
+$font--secondary: 'StyreneBLC', sans-serif;
+$font--heading: 'Granville', sans-serif;
+$font--form: 'StyreneBLC', sans-serif;
+
+
+@import 'global/mixins';
+@import 'global/font';
+@import 'global/typography';
+@import 'global/form';
+@import 'global/normalize';
+@import 'global/base';
+
+@import "components/header";
+@import "components/footer";
+@import "components/intro-block";
+@import "components/logo-banner";
+@import "components/pattern-cta";
+@import "components/image-carousel";
+@import "components/title-content-image";
+@import "components/shop-links";
+@import "components/image";
+@import "components/subscribe-cta";
+@import "components/image-cta";
+@import "components/menu";
+@import "components/events";
+@import "components/contact";
+@import "components/error-404";
+@import "components/basic-page";
+@import "components/faqs";
+@import "components/off-canvas";

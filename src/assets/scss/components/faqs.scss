@@ -1,0 +1,142 @@
+.faqs {
+  padding: 120px 0;
+
+  @include breakpoint(medium) {
+    padding: 135px 0;
+  }
+
+  &__inner {
+    @include inner;
+  }
+
+  &__title {
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px 40px 20px;
+    background: $color--vanilla;
+
+    @include breakpoint(medium) {
+      padding: 40px 0 0;
+    }
+
+    h1 {
+      font-family: $font--heading;
+      text-align: center;
+      @include heading-h4(500);
+      margin: 0;
+
+      @include breakpoint(medium) {
+        @include heading-h2(500);
+      }
+    }
+  }
+
+
+  &__content {
+    background: $color--vanilla;
+    padding: 20px 20px;
+    @include breakpoint(medium) {
+      max-width: 943px;
+      padding: 50px 78px 60px;
+      margin: 0 auto;
+    }
+  }
+  &__item {
+    &.active {
+      .faqs__item-content {
+        max-height: 1000px; /* Adjust the value as needed */
+        transition: max-height 0.3s ease-in;
+      }
+      .faqs__toggle {
+        &:before {
+          opacity: 0;
+        }
+      }
+    }
+    &:first-of-type {
+      .faqs__item-title {
+        padding-top: 0;
+      }
+    }
+  }
+  &__item-title {
+    position: relative;
+    border-bottom: 1px solid $color--scarlet;
+    padding: 12px 0;
+    cursor: pointer;
+    @include breakpoint(medium) {
+      padding: 20px 0 16px;
+    }
+    h4 {
+      margin: 0;
+      max-width: calc(100% - 100px);
+      letter-spacing: 0.2px;
+      @include heading-h4(400);
+      font-family: $font--heading;
+      text-transform: normal;
+
+      @include breakpointdown(medium) {
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0px;
+      }
+    }
+  }
+  &__toggle {
+    position: absolute;
+    bottom: 17px;
+    right: 0; 
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: '';
+      width: 1px;
+      height: 14px;
+      background: $color--primary;
+      transition: all ease 0.3s;
+      @include breakpoint(medium) {
+        height: 20px;
+      }
+    }
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      content: '';
+      width: 14px;
+      height: 1px;
+      background: $color--primary;
+      transform: translate(-50%, -50%);
+      transition: all ease 0.3s;
+      @include breakpoint(medium) {
+        width: 20px;
+      }
+    }
+    @include breakpoint(medium) {
+      width: 20px;
+      height: 20px;
+      bottom: 23px;
+    }
+  }
+  &__item-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    p {
+      @include paragraph-p1(500);
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+    }
+    &-wrap {
+      padding: 32px 0 40px;
+    }
+  }
+}

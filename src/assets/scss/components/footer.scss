@@ -1,0 +1,308 @@
+.footer {
+  background-color: $color--primary;
+  padding: 70px 0;
+
+  @include breakpoint(medium) {
+    padding: 60px 0;
+  }
+
+  &__inner {
+    @include inner;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+      position: relative;
+
+      svg {
+        height: 100%;
+        width: 100%;
+      }
+
+      &--word {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 50%;
+        transform: translate(-55%, 0);
+
+        svg {
+          height: auto;
+          width: 140px;
+
+          @include breakpoint(medium) {
+            width: 15vw;
+          }
+        }
+      }
+
+      &--close {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+
+  &__middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 48px;
+
+    @include breakpoint(medium) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 0;
+    }
+
+    ul {
+      margin: 0;
+
+      li {
+        list-style-type: none;
+      }
+    }
+
+    h3, a, li {
+      color: $color--vanilla;
+      text-decoration: none;
+      font-family: $font--secondary;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      display: block;
+      @include subheading-s3(500);
+
+      @include breakpoint(medium) {
+        @include subheading-s1(500);
+      }
+    }
+
+    h3 {
+      @include breakpointdown(medium) {
+        display: none;
+      }
+    }
+  }
+
+  &__location {
+    order: -1;
+
+    @include breakpoint(medium) {
+      order: 0;
+    }
+
+    a {
+      &:first-of-type {
+        margin: 0 0 20px 0 !important;
+
+        @include breakpoint(medium) {
+          margin: 0 0 28px 0 !important;
+        }
+      }
+
+      &:not(:last-child) {
+        margin: 0 0 6px 0;
+      }
+    }
+  }
+
+  &__nav {
+    @include breakpoint(medium) {
+      min-width: 240px;
+    }
+
+    h3 {
+      @include breakpoint(medium) {
+        margin: 0 0 16px 0;
+      }
+    }
+
+    ul {
+      margin: 0;
+
+      @include breakpointdown(medium) {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        margin: 0 0 48px 0;
+      }
+    }
+
+    li {
+      margin: 0 0 4px 0;
+    }
+  }
+
+  &__time {
+    @include breakpoint(medium) {
+      min-width: 240px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      @include breakpoint(medium) {
+        gap: 28px;
+      }
+
+      li {
+        margin: 0;
+      }
+    }
+
+    br {
+      @include breakpointdown(medium) {
+        display: none;
+      }
+    }
+  }
+
+  &__social {
+    @include breakpoint(medium) {
+      margin: 48px 0 0 0;
+    }
+
+    ul {
+      margin: 0;
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+
+      li {
+        margin: 0;
+        list-style-type: none;
+
+        a {
+          height: 24px;
+          width: 24px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    ul {
+      margin: 0;
+
+      li {
+        list-style-type: none;
+      }
+    }
+
+    li, a {
+      color: $color--vanilla;
+    }
+
+    &--logo {
+      justify-content: center;
+      display: flex;
+
+      a {
+        margin: 0 0 28px 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+  }
+
+  &__credit {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(medium) {
+      flex-direction: row;
+      align-items: end;
+      justify-content: space-between;
+    }
+  }
+
+  &__col {
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint(medium) {
+      min-width: 215px;
+      display: block;
+    }
+
+    a, p {
+      @include caption-c1(400);
+      color: $color--gray;
+      text-decoration: none;
+      margin: 0;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+
+      @include breakpoint(medium) {
+        justify-content: space-between;
+      }
+
+      li {
+        margin: 0;
+      }
+    }
+  }
+
+  &__res {
+    max-width: 666px;
+    order: -1;
+    margin: 0 0 30px 0;
+
+    @include breakpoint(medium) {
+      order: 0;
+      margin: 0;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 24px;
+
+      @include breakpoint(medium) {
+        gap: 10px 28px;
+      }
+
+      li {
+        margin: 0;
+      }
+    }
+
+    a {
+      @include footer-f1(400);
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family: $font--secondary;
+      letter-spacing: 1px;
+
+      @include breakpoint(medium) {
+        @include caption-c1(400);
+        line-height: 22px;
+        letter-spacing: 1.1px;
+      }
+    }
+  }
+}

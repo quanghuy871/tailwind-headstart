@@ -1,0 +1,146 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 10px 0;
+  transition: all ease-in-out 0.3s;
+
+  @include breakpoint(medium) {
+    padding: 0;
+  }
+
+  &__inner {
+    @include inner;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    @include breakpointdown(medium) {
+      height: 40px;
+    }
+
+    svg {
+      opacity: 1;
+      height: 100%;
+      transition: all ease-in-out 0.3s;
+      path {
+        fill: $color--primary;
+      }
+    }
+  }
+
+  &__button {
+    min-width: 75px;
+
+    @include breakpoint(medium) {
+      display: none;
+    }
+
+    a {
+      text-transform: uppercase;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @include breakpoint(medium) {
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      padding: 18px 0;
+      min-width: 355px;
+    }
+
+    ul {
+      margin: 0;
+      display: flex;
+      gap: 40px;
+      align-items: center;
+
+      li {
+        list-style-type: none;
+        margin: 0;
+
+        a {
+          @include subheading-s1(500);
+          font-family: $font--secondary;
+          text-decoration: none;
+          text-transform: uppercase;
+          letter-spacing: 1.6px;
+          transition: all ease-in-out 0.3s;
+        }
+      }
+    }
+  }
+
+  &--up {
+    transform: translateY(-150%);
+  }
+
+  &--scrolled {
+    background-color: $color--scarlet;
+
+    a {
+      color: $color--vanilla;
+    }
+
+    .btn {
+      background-color: $color--vanilla;
+      color: $color--scarlet;
+
+      &:hover {
+        background-color: $color--vanilla;
+      }
+    }
+
+    .header__hamburger {
+      color: $color--vanilla !important;
+    }
+
+    .header__logo {
+      svg {
+        opacity: 1;
+        path {
+          fill: $color--vanilla;
+        }
+      }
+    }
+  }
+
+  &__hamburger {
+    justify-content: end;
+    text-transform: uppercase;
+    font-family: $font--secondary;
+    @include subheading-s3(500);
+    letter-spacing: 1.6px;
+    transition: all ease-in-out 0.3s;
+    color: $color--primary;
+    min-width: 75px;
+    background-color: transparent !important;
+
+    @include breakpoint(medium) {
+      display: none;
+    }
+  }
+
+  &--off-canvas {
+    transform: translateY(0);
+
+    .header {
+      &__button {
+       .btn {
+         background-color: $color--vanilla;
+         color: $color--scarlet;
+       }
+      }
+
+      &__hamburger {
+        color: $color--vanilla;
+      }
+    }
+  }
+}

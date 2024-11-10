@@ -1,0 +1,320 @@
+.form {
+  &--newsletter {
+    input {
+      border: none;
+      border-bottom: 1px solid $color--vanilla;
+      padding: 10px 0 12px;
+      color: $color--vanilla;
+      background-color: transparent;
+      @include paragraph-p2(500);
+      letter-spacing: 0.2px;
+      margin: 0 0 35px 0;
+      width: 100%;
+
+      @include breakpoint(medium) {
+        @include paragraph-p1(500);
+        width: 35vw;
+        margin: 0 0 60px 0;
+      }
+
+      &::placeholder {
+        @include paragraph-p1(500);
+        color: $color--vanilla;
+        opacity: 1;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      text-transform: uppercase;
+      justify-content: center;
+      min-width: 100%;
+      cursor: pointer;
+
+      @include breakpoint(medium) {
+        min-width: 190px;
+      }
+    }
+  }
+
+  &__success {
+    text-align: center;
+
+    @include breakpoint(medium) {
+      max-width: 555px;
+      margin: 0 auto;
+    }
+
+    &--buttons {
+      margin: 40px 0 0 0;
+
+      @include breakpoint(medium) {
+        margin: 60px 0 0 0;
+        display: flex;
+        gap: 35px;
+        justify-content: center;
+      }
+
+      a {
+        justify-content: center;
+        text-transform: uppercase;
+        display: block;
+        min-width: 100%;
+
+        @include breakpoint(medium) {
+          min-width: 190px;
+        }
+
+        &:first-of-type {
+          margin: 0 0 24px 0;
+
+          @include breakpoint(medium) {
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    h3 {
+      @include subheading-s3(500);
+      font-family: $font--secondary;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      margin: 0 0 24px 0;
+
+      @include breakpoint(medium) {
+        @include subheading-s1(500);
+        margin: 0 0 20px 0;
+      }
+    }
+
+    h2 {
+      @include heading-h4(500);
+      margin: 0 0 24px 0;
+      letter-spacing: 0.4px;
+      font-family: $font--heading;
+
+      @include breakpoint(medium) {
+        @include heading-h2(500);
+        margin: 0 0 32px 0;
+      }
+    }
+
+    p {
+      @include paragraph-p2(500);
+      letter-spacing: 0.2px;
+      margin: 0;
+
+      @include breakpoint(medium) {
+        @include paragraph-p1(500);
+      }
+    }
+  }
+}
+
+form {
+  margin: 0;
+  width: 100%;
+
+  @include breakpoint(medium) {
+    max-width: 666px;
+    margin: 0 auto !important;
+  }
+
+  .form {
+    &--email {
+      gap: 28px;
+      display: flex;
+      margin: 0 0 40px 0 !important;
+
+      @include breakpoint(medium) {
+        margin: 0 0 60px 0 !important;
+      }
+
+      .form--row__item {
+        &:first-of-type {
+          width: 69%;
+        }
+
+        &:last-of-type {
+          width: 31%;
+        }
+      }
+    }
+
+    &--checkbox {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      label {
+        margin: 0;
+        position: relative;
+        padding-left: 40px;
+        cursor: pointer;
+        color: $color--primary;
+        max-width: 320px;
+        text-align: left;
+        font-family: $font--primary;
+
+        @include breakpoint(medium) {
+          @include paragraph-p1(400);
+          max-width: 35vw;
+        }
+
+        &:before {
+          position: absolute;
+          content: '';
+          top: 50%;
+          transform: translate(0, -50%);
+          left: 0;
+          border: 1px solid $color--primary;
+          height: 20px;
+          width: 20px;
+          background-color: transparent;
+        }
+
+        &:after {
+          position: absolute;
+          display: none;
+          content: '';
+          left: 4px;
+          top: 50%;
+          width: 12px;
+          height: 8px;
+          background-image: url("../../assets/images/checked.svg");
+          background-repeat: no-repeat;
+          transform: translateY(-50%);
+        }
+      }
+
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: auto !important;
+        font-family: $font--primary;
+
+        &:checked ~ label:before {
+          background-color: transparent;
+          border-color: $color--primary;
+        }
+
+        &:checked ~ label:after {
+          display: block;
+        }
+      }
+    }
+
+    &--row {
+      margin: 0 0 28px 0;
+
+      @include breakpoint(medium) {
+        margin: 0 0 38px 0;
+      }
+
+      &:last-of-type {
+        margin: 0;
+      }
+
+      &__double {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+
+        @include breakpoint(medium) {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          gap: 48px;
+        }
+      }
+
+      &__item {
+        @include breakpoint(medium) {
+          width: 50%;
+        }
+      }
+
+      &__textarea {
+        margin-top: 48px;
+        margin-bottom: 48px;
+        border: 1px solid $color--primary;
+
+        @include breakpoint(medium) {
+          margin-top: 44px;
+          margin-bottom: 60px;
+        }
+      }
+
+      input, textarea {
+        @include paragraph-p2(400);
+        min-height: 42px;
+        padding: 10px 0;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        color: $color--primary;
+        border-bottom: 1px solid $color--primary;
+        font-family: $font--primary;
+
+        @include breakpoint(medium) {
+          @include paragraph-p1(400);
+        }
+
+        &::placeholder {
+          @include paragraph-p2(400);
+          color: $color--primary;
+          opacity: 1;
+
+          @include breakpoint(medium) {
+            @include paragraph-p1(400);
+          }
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      textarea {
+        padding: 16px 20px;
+        border: 1px solid $color--vanilla;
+        min-height: 120px;
+
+        @include breakpoint(medium) {
+          min-height: 8vw;
+        }
+      }
+    }
+
+    &--submit {
+      @include breakpointdown(medium) {
+        display: block;
+      }
+
+      button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px 0 0 0;
+        text-transform: uppercase;
+        letter-spacing: 1.6px;
+        @include subheading-s1(500);
+        cursor: pointer;
+
+        @include breakpoint(medium) {
+          width: auto;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+

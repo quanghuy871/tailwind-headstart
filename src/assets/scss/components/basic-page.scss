@@ -1,0 +1,59 @@
+.basic-page {
+  padding: 120px 0;
+
+  @include breakpoint(medium) {
+    padding: 135px 0;
+  }
+
+  &__inner {
+    @include inner;
+  }
+
+  &__title {
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    background: $color--vanilla;
+
+    @include breakpoint(medium) {
+      padding: 40px 0 0;
+    }
+
+    h1 {
+      font-family: $font--heading;
+      text-align: center;
+      margin: 0;
+      @include heading-h3(500);
+
+      @include breakpoint(medium) {
+        @include heading-h2(500);
+      }
+    }
+  }
+
+
+  &__content {
+    padding: 30px 0 0;
+    background: $color--vanilla;
+    @include breakpoint(medium) {
+      max-width: 832px;
+      padding: 50px 78px 60px;
+      margin: 0 auto;
+    }
+
+    h1, h2, h3, h4, h5, h6, strong {
+      @include subheading-s3(500);
+      font-family: $font--secondary;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+
+      @include breakpoint(medium) {
+        @include subheading-s1(500);
+      }
+    }
+
+    p, li, a {
+      @include paragraph-p1(500);
+    }
+  }
+}

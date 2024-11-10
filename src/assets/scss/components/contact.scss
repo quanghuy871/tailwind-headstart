@@ -1,0 +1,204 @@
+.contact {
+  padding: 160px 0;
+  @include breakpoint(medium) {
+  }
+
+  &__inner {
+    @include inner;
+  }
+
+  &__logo {
+    text-align: center;
+    margin: 0 0 40px 0;
+
+    @include breakpoint(medium) {
+      margin: 0 0 65px 0;
+    }
+
+    svg {
+      @include breakpointdown(medium) {
+        max-width: 140px;
+      }
+    }
+  }
+
+  &__detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 48px;
+    margin: 0 0 80px 0;
+
+    @include breakpoint(medium) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 0;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    p, a {
+      color: $color--primary;
+      font-family: $font--secondary;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      display: block;
+      @include subheading-s3(500);
+
+      @include breakpoint(medium) {
+        @include subheading-s1(500);
+      }
+    }
+
+    a {
+      &:not(:last-child) {
+        margin: 0 0 20px 0;
+
+        @include breakpoint(medium) {
+          margin: 0 0 28px 0;
+        }
+      }
+    }
+  }
+
+  &__location {
+    order: -1;
+
+    @include breakpoint(medium) {
+      order: 0;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:first-of-type {
+        margin: 0 0 20px 0 !important;
+
+        @include breakpoint(medium) {
+          margin: 0 0 28px 0 !important;
+        }
+      }
+
+      &:not(:last-child) {
+        margin: 0 0 6px 0;
+      }
+    }
+
+    span {
+      margin: 0 5px 0 0;
+    }
+  }
+
+  &__nav {
+    @include breakpoint(medium) {
+      min-width: 240px;
+    }
+
+    h3 {
+      @include breakpoint(medium) {
+        margin: 0 0 16px 0;
+      }
+    }
+
+    h3, a {
+      text-decoration: none;
+      font-family: $font--secondary;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      display: block;
+      @include subheading-s3(500);
+
+      @include breakpoint(medium) {
+        @include subheading-s1(500);
+      }
+    }
+
+    ul {
+      margin: 0;
+
+      @include breakpointdown(medium) {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        margin: 0 0 48px 0;
+      }
+    }
+
+    li {
+      margin: 0 0 4px 0;
+    }
+  }
+
+  &__time {
+    @include breakpoint(medium) {
+      min-width: 240px;
+    }
+
+    br {
+      @include breakpointdown(medium) {
+        display: none;
+      }
+    }
+
+    p {
+      &:last-of-type {
+        margin: 0;
+      }
+
+      &:not(:last-child) {
+        margin: 0 0 8px 0;
+
+        @include breakpoint(medium) {
+          margin: 0 0 28px 0;
+        }
+      }
+    }
+  }
+
+  &__social {
+    margin: 0 0 32px 0;
+
+    @include breakpoint(medium) {
+      margin: 0 0 70px 0;
+    }
+
+    ul {
+      margin: 0;
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+
+      li {
+        list-style-type: none;
+        margin: 0;
+
+        a {
+          height: 24px;
+          width: 24px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      svg {
+        path {
+          fill: $color--primary;
+        }
+      }
+    }
+
+    h3 {
+      @include breakpointdown(medium) {
+        display: none;
+      }
+    }
+  }
+
+  &__form {
+    @include breakpoint(medium) {
+      margin: 100px 0 0 0;
+    }
+  }
+}

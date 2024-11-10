@@ -1,0 +1,93 @@
+.shop-links {
+  margin: 0 0 65px 0;
+
+  @include breakpoint(medium) {
+    margin: 0 0 100px 0;
+  }
+
+  &__inner {
+    @include inner;
+  }
+
+  &__button {
+    margin: 0 0 40px 0;
+
+    a {
+      @include subheading-s2(500);
+      width: 100%;
+      justify-content: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+  }
+
+  &__items {
+    @include breakpoint(medium) {
+      display: flex;
+      gap: 40px;
+    }
+
+    .gatsby-image-wrapper {
+      margin: 0 0 32px 0;
+      aspect-ratio: 345 / 437 !important;
+
+      @include breakpoint(medium) {
+        aspect-ratio: 418 / 500 !important;
+      }
+    }
+
+    h3 {
+      @include heading-h4(400);
+      margin: 0 0 4px 0;
+      letter-spacing: 0.2px;
+      font-family: $font--heading;
+
+      @include breakpoint(medium) {
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 34px;
+      }
+    }
+
+    h4 {
+      @include subheading-s1(500);
+      font-family: $font--secondary;
+      letter-spacing: 1.6px;
+      margin: 0 0 16px 0;
+
+      @include breakpoint(medium) {
+        margin: 0 0 20px 0;
+      }
+    }
+
+    a {
+      text-transform: uppercase;
+    }
+
+    p {
+      max-width: 380px;
+      margin: 0 auto;
+      @include paragraph-p2(500);
+
+      &:last-of-type {
+        margin: 0 auto 28px auto;
+
+        @include breakpoint(medium) {
+          margin: 0 auto 20px auto;
+        }
+      }
+    }
+  }
+
+  &__item {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin: 0 0 40px 0;
+
+      @include breakpoint(medium) {
+        margin: 0;
+      }
+    }
+  }
+}

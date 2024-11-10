@@ -1,0 +1,65 @@
+@mixin heading-h1($weight: 300) {
+  font-size: 52px;
+  line-height: 60px;
+  font-weight: $weight;
+}
+
+@mixin heading-h2($weight: 300) {
+  font-size: 44px;
+  line-height: 52px;
+  font-weight: $weight;
+}
+
+@mixin heading-h3($weight: 300) {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: $weight;
+}
+
+@mixin heading-h4($weight: 300) {
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: $weight;
+}
+
+@mixin paragraph-p1($weight: 300) {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: $weight;
+}
+
+@mixin paragraph-p2($weight: 300) {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: $weight;
+}
+
+@mixin subheading-s1($weight: 300) {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: $weight;
+}
+
+@mixin subheading-s2($weight: 300) {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: $weight;
+}
+
+@mixin subheading-s3($weight: 300) {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: $weight;
+}
+
+@mixin caption-c1($weight: 300) {
+  font-size: 11px;
+  line-height: 17px;
+  font-weight: $weight;
+}
+
+@mixin footer-f1($weight: 300) {
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: $weight;
+}
