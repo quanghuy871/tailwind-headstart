@@ -3,12 +3,10 @@
   background-repeat: repeat;
   background-position: top;
   background-size: 1200px;
-  background-image: url('../images/cheri-pattern.svg');
   padding: 120px 0;
   @include breakpoint(medium) {
     padding: 180px 0;
   }
-
 
   &__inner {
     @include inner;
@@ -46,14 +44,14 @@
     }
 
     h2 {
-      font-family: $font--heading;
-      @include heading-h4(400);
-      margin: 0 0 24px 0;
+      //font-family: $font--heading;
+      //@include heading-h4(400);
+      //margin: 0 0 24px 0;
 
       @include breakpoint(medium) {
-        @include heading-h2(400);
-        margin: 0 auto 40px auto;
-        max-width: 820px;
+        //@include heading-h2(400);
+        //margin: 0 auto 40px auto;
+        //max-width: 820px;
       }
     }
   }

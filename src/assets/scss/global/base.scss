@@ -33,77 +33,77 @@ a {
   color: $color--primary;
 }
 
-.btn {
-  @include st-transition;
-  display: inline-flex;
-  text-decoration: none;
-  align-items: center;
-  background: none;
-  border: none;
-  padding: 0;
-  letter-spacing: 1.6px;
-
-  &.btn--black {
-    position: relative;
-
-    @include breakpoint(medium) {
-      &:hover {
-        color: $color--scarlet;
-      }
-    }
-  }
-
-  &.btn--scarlet {
-    @include subheading-s1(500);
-    line-height: 1;
-    font-family: $font--secondary;
-    border: 1.5px solid $color--scarlet;
-    position: relative;
-    background-color: $color--scarlet;
-    padding: 12px 22px;
-    color: $color--vanilla;
-
-    @include breakpoint(medium) {
-      &:hover {
-        color: $color--scarlet;
-        background-color: transparent;
-      }
-    }
-  }
-
-  &.btn--border {
-    @include subheading-s1(500);
-    line-height: 1;
-    font-family: $font--secondary;
-    border: 1.5px solid $color--scarlet;
-    position: relative;
-    background-color: transparent;
-    padding: 12px 22px;
-
-    @include breakpoint(medium) {
-      &:hover {
-        color: $color--vanilla;
-        background-color: $color--scarlet;
-      }
-    }
-  }
-
-  &.btn--vanilla {
-    @include subheading-s1(500);
-    background-color: $color--vanilla;
-    padding: 10px 40px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-
-    @include breakpoint(medium) {
-    }
-
-    &:hover {
-      background-color: $color--scarlet;
-      color: $color--vanilla;
-    }
-  }
-}
+//.btn {
+//  @include st-transition;
+//  display: inline-flex;
+//  text-decoration: none;
+//  align-items: center;
+//  background: none;
+//  border: none;
+//  padding: 0;
+//  letter-spacing: 1.6px;
+//
+//  &.btn--black {
+//    position: relative;
+//
+//    @include breakpoint(medium) {
+//      &:hover {
+//        color: $color--scarlet;
+//      }
+//    }
+//  }
+//
+//  &.btn--scarlet {
+//    @include subheading-s1(500);
+//    line-height: 1;
+//    font-family: $font--secondary;
+//    border: 1.5px solid $color--scarlet;
+//    position: relative;
+//    background-color: $color--scarlet;
+//    padding: 12px 22px;
+//    color: $color--vanilla;
+//
+//    @include breakpoint(medium) {
+//      &:hover {
+//        color: $color--scarlet;
+//        background-color: transparent;
+//      }
+//    }
+//  }
+//
+//  &.btn--border {
+//    @include subheading-s1(500);
+//    line-height: 1;
+//    font-family: $font--secondary;
+//    border: 1.5px solid $color--scarlet;
+//    position: relative;
+//    background-color: transparent;
+//    padding: 12px 22px;
+//
+//    @include breakpoint(medium) {
+//      &:hover {
+//        color: $color--vanilla;
+//        background-color: $color--scarlet;
+//      }
+//    }
+//  }
+//
+//  &.btn--vanilla {
+//    @include subheading-s1(500);
+//    background-color: $color--vanilla;
+//    padding: 10px 40px;
+//    text-transform: uppercase;
+//    letter-spacing: 1px;
+//
+//    @include breakpoint(medium) {
+//    }
+//
+//    &:hover {
+//      background-color: $color--scarlet;
+//      color: $color--vanilla;
+//    }
+//  }
+//}
 
 .page-template--events {
   .title-content-image {
